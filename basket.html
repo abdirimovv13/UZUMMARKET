@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand" href="index.html">Uzum Market</a>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Продукты</a></li>
+        <li class="nav-item"><a class="nav-link" href="basket.html">Корзина</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin.html">Админ</a></li>
+      </ul>
+      <input id="search-input" class="form-control w-auto" type="search" placeholder="🔍 Искать..."
+        oninput="searchProducts()">
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">🛒 Ваша корзина</h2>
+
+    <div id="basket-list" class="row">
+    </div>
+
+    <div class="text-end mt-4">
+      <h4>Общая сумма: <span id="total-price" class="fw-bold">0</span> сум</h4>
+      <button class="btn btn-success w-100 mt-3" onclick="checkout()">Оформить заказ</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
